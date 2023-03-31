@@ -11,5 +11,5 @@ def about(request):
     return render(request, 'base/about.html')
 
 
-def services(request):
-    return render(request, 'base/svs.html')
+def welcome(request):
+    return render(request, 'base/welcome.html')
