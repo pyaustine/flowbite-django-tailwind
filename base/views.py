@@ -13,3 +13,7 @@ def about(request):
 
 def welcome(request):
     return render(request, 'base/welcome.html')
+
+
+def survey(request):
+    return render(request, 'base/survey.html')
