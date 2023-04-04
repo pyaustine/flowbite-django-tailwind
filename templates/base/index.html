@@ -15,8 +15,10 @@
         class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left"
       >
         <h2 class="mb-4 text-3xl font-bold text-left lg:text-5xl">
-          Leave <br />
-          Worries Behind <br />
+          <span class="dark:text-gray-400"
+            >Leave <br />
+            Worries Behind <br
+          /></span>
 
           <span class="text-5xl text-blue-500 leading-relaxeds">
             With HIV Risk Assessment
@@ -119,7 +121,7 @@
           >
             <a
               type="button"
-              href="{% url 'welcome' %}"
+              href="{% url 'survey' %}"
               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               I accept
@@ -158,7 +160,7 @@
               d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
             />
             <image
-              class="home__blob-img"
+              class=""
               x="50"
               y="60"
               href="{% static 'images/sarah.png' %}"
@@ -171,20 +173,20 @@
 
   <!-- Parallax Background -->
   <section
-    class="flex flex-col w-full h-[500px] bg-cover bg-fixed bg-center flex justify-center items-center"
+    class="flex flex-col w-full h-[500px] bg-cover bg-gray-800 bg-fixed bg-center flex justify-center items-center"
     style="background-image: url(../../static/images/parralax_1.jpg)"
   >
-    <h1 class="text-white text-5xl font-semibold mt-20 mb-2">
-      Welcome to Jijue
+    <h1 class="text-white text-5xl font-bold mt-20 mb-2 dark:text-gray-300">
+      About
     </h1>
 
     <span class="text-center font-bold my-20 text-white/90">
-      <a class="text-black/90 hover:text-white text-sm">
+      <a class="text-black/90 hover:text-white text-xl">
         Welcome to our HIV Risk Assessment website, where you can take a quick
         and confidential test to determine your risk of contracting HIV. Take
         the first step towards protecting your sexual health and start your HIV
         risk assessment today. Your result could be the key to a brighter,
-        healthier future.
+        healthier future
       </a>
 
       <hr class="my-4" />
@@ -192,67 +194,187 @@
       <a class="text-black/90 hover:text-white"> Welcome </a>
 
       <hr class="my-4" />
-
-      <!-- <p>
-        <a
-          href="https://github.com/EgoistDeveloper/my-tailwind-components/blob/main/src/templates/parallax-landing-page.html"
-          target="_blank"
-          class="text-white/90 hover:text-white"
-        >
-          Source Code
-        </a>
-        |
-        <a
-          href="https://egoistdeveloper.github.io/my-tailwind-components/./src/templates/parallax-landing-page.html"
-          target="_blank"
-          class="text-white/90 hover:text-white"
-        >
-          Full Preview
-        </a>
-      </p> -->
     </span>
   </section>
 
-  <section id="about">
+  <section id="about" class="dark:bg-gray-800 py-12 mt-8">
     <!-- component -->
-    <div class="py-16 bg-white">
-      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+    <div class="py-16 bg-white dark:bg-gray-700">
+      <div class="container m-auto px-6 text-gray-600 xl:px-6">
         <div
           class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
         >
-          <div class="md:5/12 lg:w-5/12">
-            <img
-              src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-              alt="image"
-              loading="lazy"
-              width=""
-              height=""
-            />
+          <div
+            id="default-carousel"
+            class="relative w-full"
+            data-carousel="slide"
+          >
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+              <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="{% static 'images/gameday.jpg' %}"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="{% static 'images/salmon.jpg' %}"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="{% static 'images/market.jpg' %}"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="{% static 'images/kids.jpg' %}"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="{% static 'images/men.png' %}"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+            </div>
+            <!-- Slider indicators -->
+            <div
+              class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+            >
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="true"
+                aria-label="Slide 1"
+                data-carousel-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 2"
+                data-carousel-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 3"
+                data-carousel-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 4"
+                data-carousel-slide-to="3"
+              ></button>
+              <button
+                type="button"
+                class="w-3 h-3 rounded-full"
+                aria-current="false"
+                aria-label="Slide 5"
+                data-carousel-slide-to="4"
+              ></button>
+            </div>
+            <!-- Slider controls -->
+            <button
+              type="button"
+              class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  ></path>
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
           </div>
+
           <div class="md:7/12 lg:w-6/12">
-            <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
-              Jijue development was carried out by passionate a team
+            <h2
+              class="text-2xl text-gray-900 font-bold md:text-4xl dark:text-gray-400"
+            >
+              Jijue development was carried out by a passionate team
             </h2>
-            <p class="mt-6 text-gray-600">
-              Jijue website was created by a multidisciplinary team of students
+            <p class="mt-6 text-gray-600 dark:text-gray-100">
+              Jijue is a website created by a multidisciplinary team of students
               from Jomo Kenyatta University of Agriculture and Technology. The
-              aim of the web app is to provide a user-friendly platform for
-              individuals to assess their HIV risk and connect them to Health
-              Facilities for further management.
+              platform's main goal is to provide a user-friendly website for
+              individuals to assess their HIV risk and connect them to health
+              facilities for further management.
             </p>
-            <p class="mt-4 text-gray-600">
-              In an age of fast paced technologies, Jijue was founded to provide
-              a smart, accessible and multifunctional digital health platform
-              that offers a seamless experience in undertaking an accurate self
-              risk assessment for HIV, while also creating a nationwide linkage
-              for easy accessibility to HIV testing and prevention services. We
-              strive to reshape the approach in promoting HIV testing.
+            <p class="mt-4 text-gray-600 dark:text-gray-100">
+              In today's fast-paced world, Jijue was created to provide a smart,
+              accessible, and multifunctional digital health platform. It offers
+              a seamless experience in undertaking an accurate self-risk
+              assessment for HIV while creating a nationwide linkage for easy
+              accessibility to HIV testing and prevention services. Jijue is
+              striving to reshape the approach in promoting HIV testing and
+              awareness.
             </p>
-            <p class="mt-4 text-gray-600">
-              We aspire to establish a globally renowned platform of utter
-              excellence in promoting HIV awareness, testing and prevention,
-              ultimately containing the HIV/AIDS epidemic and creating a world
-              without AIDS
+            <p class="mt-4 text-gray-600 dark:text-gray-100">
+              By providing access to information and resources, Jijue hopes to
+              empower individuals to take control of their health and make
+              informed decisions about their HIV risk. With their innovative
+              approach to promoting HIV testing and awareness, Jijue is
+              committed to making a difference in the fight against HIV/AIDS.
             </p>
           </div>
         </div>
@@ -262,7 +384,7 @@
 
   <section id="faq">
     <!-- Accordion -->
-    <h1 class="text-4xl font-bold text-center my-20">
+    <h1 class="text-4xl font-bold text-center my-20 dark:text-gray-400">
       Frequently Asked Questions
     </h1>
     <div id="accordion-open" data-accordion="open" class="mt-6">
@@ -287,7 +409,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            What is Flowbite?</span
+            What is Jijue, and how does it work?</span
           >
           <svg
             data-accordion-icon
@@ -313,19 +435,22 @@
           class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
         >
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is an open-source library of interactive components built
-            on top of Tailwind CSS including buttons, dropdowns, modals,
-            navbars, and more.
+            Jijue is a user-friendly website that allows individuals to assess
+            their HIV risk and connects them to healthcare facilities for
+            further management. To generate your risk score, you'll simply
+            answer a few questions about your behavior and lifestyle etc, and
+            the website will provide you with a risk assessment score, probable
+            recommendation, choice to book an appointment to a virtual or
+            physical counsellor, and a list of healthcare facilities near you.
           </p>
           <p class="text-gray-500 dark:text-gray-400">
-            Check out this guide to learn how to
+            You can
             <a
-              href="/docs/getting-started/introduction/"
+              href="{% url 'welcome' %}"
               class="text-blue-600 dark:text-blue-500 hover:underline"
-              >get started</a
+              >assess your risk</a
             >
-            and start developing websites even faster with components on top of
-            Tailwind CSS.
+            now.
           </p>
         </div>
       </div>
@@ -349,7 +474,7 @@
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
                 clip-rule="evenodd"
               ></path></svg
-            >Is there a Figma file available?</span
+            >Is my information secure on Jijue?</span
           >
           <svg
             data-accordion-icon
@@ -371,21 +496,22 @@
         class="hidden"
         aria-labelledby="accordion-open-heading-2"
       >
-        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+        <div
+          class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Flowbite is first conceptualized and designed using the Figma
-            software so everything you see in the library has a design
-            equivalent in our Figma file.
+            Yes, we take the security and privacy of our users' information very
+            seriously. All data collected on Jijue is encrypted and stored
+            securely.
           </p>
           <p class="text-gray-500 dark:text-gray-400">
             Check out the
             <a
               href="https://flowbite.com/figma/"
               class="text-blue-600 dark:text-blue-500 hover:underline"
-              >Figma design system</a
+              >privacy policy and terms of service</a
             >
-            based on the utility classes from Tailwind CSS and components from
-            Flowbite.
+            for this website to learn more.
           </p>
         </div>
       </div>
@@ -410,7 +536,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            What are the differences between Flowbite and Tailwind UI?</span
+            Is Jijue only for people living in Kenya?</span
           >
           <svg
             data-accordion-icon
@@ -432,44 +558,354 @@
         class="hidden"
         aria-labelledby="accordion-open-heading-3"
       >
-        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
           <p class="mb-2 text-gray-500 dark:text-gray-400">
-            The main difference is that the core components from Flowbite are
-            open source under the MIT license, whereas Tailwind UI is a paid
-            product. Another difference is that Flowbite relies on smaller and
-            standalone components, whereas Tailwind UI offers sections of pages.
+            No, anyone can use Jijue regardless of their location. However, the
+            website currently only provides information about healthcare
+            facilities in Kenya.
           </p>
-          <p class="mb-2 text-gray-500 dark:text-gray-400">
-            However, we actually recommend using both Flowbite, Flowbite Pro,
-            and even Tailwind UI as there is no technical reason stopping you
-            from using the best of two worlds.
-          </p>
-          <p class="mb-2 text-gray-500 dark:text-gray-400">
-            Learn more about these technologies:
-          </p>
-          <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-            <li>
-              <a
-                href="https://flowbite.com/pro/"
-                class="text-blue-600 dark:text-blue-500 hover:underline"
-                >Flowbite Pro</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://tailwindui.com/"
-                rel="nofollow"
-                class="text-blue-600 dark:text-blue-500 hover:underline"
-                >Tailwind UI</a
-              >
-            </li>
-          </ul>
         </div>
       </div>
+
+      <!-- new drop -->
+      <h2 id="accordion-open-heading-4">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-open-body-4"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-4"
+        >
+          <span class="flex items-center"
+            ><svg
+              class="w-5 h-5 mr-2 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            How accurate is the HIV risk assessment on Jijue?</span
+          >
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-open-body-4"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-4"
+      >
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            The HIV risk assessment on Jijue is based on internationally
+            recognized risk assessment tools and has been validated through
+            research studies. However, it is important to remember that the risk
+            assessment is only a guide, and you should always seek the advice of
+            a healthcare professional for a definitive diagnosis.
+          </p>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- new drop -->
+      <h2 id="accordion-open-heading-5">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-open-body-5"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-5"
+        >
+          <span class="flex items-center"
+            ><svg
+              class="w-5 h-5 mr-2 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            Does Jijue provide HIV testing?</span
+          >
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-open-body-5"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-5"
+      >
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            No, Jijue does not provide HIV testing. However, the website
+            provides a list of healthcare facilities near you where you can get
+            tested. Moreover, Jijue provides you with a link to order self-test
+            kit which will be delivered safely at the comfort of your home.
+          </p>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- new drop -->
+      <h2 id="accordion-open-heading-6">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-open-body-6"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-6"
+        >
+          <span class="flex items-center"
+            ><svg
+              class="w-5 h-5 mr-2 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            What if I have questions about my risk assessment score?</span
+          >
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-open-body-6"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-6"
+      >
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            If you have questions about your risk assessment score, we recommend
+            that you speak with a healthcare professional. The website also
+            provides resources for finding counseling and testing services near
+            you.
+          </p>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- new drop -->
+      <h2 id="accordion-open-heading-7">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-open-body-7"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-7"
+        >
+          <span class="flex items-center"
+            ><svg
+              class="w-5 h-5 mr-2 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            How much does it cost to use Jijue?</span
+          >
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-open-body-7"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-7"
+      >
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            Jijue is completely free to use.
+          </p>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- new drop -->
+      <h2 id="accordion-open-heading-8">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-open-body-8"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-8"
+        >
+          <span class="flex items-center"
+            ><svg
+              class="w-5 h-5 mr-2 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            How can I get involved with Jijue?</span
+          >
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-open-body-8"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-8"
+      >
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            If you're interested in getting involved with Jijue, we'd love to
+            hear from you. Please visit our Contact Us page for more
+            information.
+          </p>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- new drop -->
+      <h2 id="accordion-open-heading-9">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+          data-accordion-target="#accordion-open-body-9"
+          aria-expanded="false"
+          aria-controls="accordion-open-body-9"
+        >
+          <span class="flex items-center"
+            ><svg
+              class="w-5 h-5 mr-2 shrink-0"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            How can I help spread awareness about Jijue?</span
+          >
+          <svg
+            data-accordion-icon
+            class="w-6 h-6 shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-open-body-9"
+        class="hidden"
+        aria-labelledby="accordion-open-heading-9"
+      >
+        <div
+          class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <p class="mb-2 text-gray-500 dark:text-gray-400">
+            You can help spread awareness about Jijue by sharing the website
+            with your friends and family and by promoting it on social media.
+            Together, we can make a difference in the fight against HIV/AIDS.
+          </p>
+        </div>
+      </div>
+      <!-- end -->
     </div>
   </section>
 
-  <section id="contact" class="dark:bg-gray-900 py-12 mt-8">
+  <section id="contact" class="dark:bg-gray-800 py-12 mt-8">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2
         class="mb-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white"
@@ -604,6 +1040,29 @@
       est excepteur.
     </p>
   </section>
+
+  <!-- button -->
+  <button
+    x-data="topBtn"
+    @click="scrolltoTop"
+    id="topButton"
+    class="fixed z-10 hidden p-3 bg-gray-100 rounded-full shadow-md bottom-10 right-10 animate-bounce"
+  >
+    <svg
+      class="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2.5"
+        d="M5 10l7-7m0 0l7 7m-7-7v18"
+      ></path>
+    </svg>
+  </button>
 </main>
 
 <!-- Footer -->
@@ -828,4 +1287,5 @@
     </div>
   </div>
 </footer>
+
 {% endblock content %}
