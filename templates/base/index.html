@@ -3,6 +3,251 @@
 {% load static %}
 <!-- space -->
 {% block content %}
+<!-- 
+<nav
+  class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="/" class="flex items-center">
+      <img src="{% static 'images/logoo.png' %}" class="h-14" alt="Logo" />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jijue</span
+      >
+    </a>
+    <div class="flex md:order-2">
+      
+      <button
+        id="theme-toggle"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      >
+        <svg
+          id="theme-toggle-dark-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          id="theme-toggle-light-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="/"
+            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#faq"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >FAQs</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Nutrition Tips</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >VCT Centres</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<!-- NAVBAR -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="#" class="flex items-center">
+      <img src="../../static/images/logoo.png" class="h-8 mr-3" alt="Logo" />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jijue</span
+      >
+    </a>
+    <div class="flex md:order-2">
+      <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
+      <button
+        id="theme-toggle"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      >
+        <svg
+          id="theme-toggle-dark-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          id="theme-toggle-light-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <button
+        data-collapse-toggle="navbar-cta"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-cta"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-cta"
+    >
+      <ul
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#faq"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >FAQs</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Nutritional Tips</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >VCT Centers</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contac"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <main class="flex flex-col items-center justify-center mt-32">
   <!-- Hero -->
@@ -172,7 +417,7 @@
   </section>
 
   <!-- Parallax Background -->
-  <section
+  <!-- <section
     class="flex flex-col w-full h-[500px] bg-cover bg-gray-800 bg-fixed bg-center flex justify-center items-center"
     style="background-image: url(../../static/images/parralax_1.jpg)"
   >
@@ -195,8 +440,9 @@
 
       <hr class="my-4" />
     </span>
-  </section>
+  </section> -->
 
+  <!-- ABOUT -->
   <section id="about" class="dark:bg-gray-800 py-12 mt-8">
     <!-- component -->
     <div class="py-16 bg-white dark:bg-gray-700">
@@ -382,6 +628,146 @@
     </div>
   </section>
 
+  <!-- FEATURES -->
+  <section id="features">
+    <!-- felx container -->
+    <div
+      class="container py-12 flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row"
+    >
+      <!-- what's diff -->
+      <div class="flex flex-col space-y-12 md:w-1/2">
+        <h2
+          class="mx-w-md text-4xl font-bold text-gray-900 dark:text-gray-400 text-center md:text-left"
+        >
+          What's unique about Jijue?
+        </h2>
+        <p
+          class="max-w-sm text-center text-gray-600 dark:text-gray-100 md:text-left"
+        >
+          Jijue is a cutting-edge HIV risk assessment tool that stands out from
+          other risk calculators. Our machine learning model, personalized
+          recommendations, and user-friendly interface make Jijue a unique and
+          valuable resource for anyone concerned about their HIV risk.
+        </p>
+      </div>
+      <!-- numbered list -->
+      <div class="flex flex-col space-y-8 md:w-1/2">
+        <!-- list item 1 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- heading-->
+          <div class="rounded-l-full bg-blue-200 md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full md:py-1 bg-blue-500"
+              >
+                01
+              </div>
+              <h3
+                class="text-base text-gray-900 dark:text-gray-400 font-bold md:mb-4 md:hidden"
+              >
+                Cutting-edge Machine Learning Model
+              </h3>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              class="hidden mb-4 text-gray-900 dark:text-gray-400 text-lg font-bold md:block"
+            >
+              Cutting-edge Machine Learning Model
+            </h3>
+            <p class="text-gray-600 dark:text-gray-100">
+              Jijue is powered by a state-of-the-art machine learning model that
+              is based on the latest scientific research. This model is able to
+              accurately predict an individual's risk of contracting HIV based
+              on a number of factors, including demographics, sexual history,
+              and drug use. Our model is constantly updated with new data to
+              ensure that it remains accurate and reliable.
+            </p>
+          </div>
+        </div>
+
+        <!-- list item 2 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- heading-->
+          <div class="rounded-l-full bg-blue-200 md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full md:py-1 bg-blue-500"
+              >
+                02
+              </div>
+              <h3
+                class="text-base text-gray-900 dark:text-gray-400 font-bold md:mb-4 md:hidden"
+              >
+                Personalized Recommendations
+              </h3>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              class="hidden text-gray-900 dark:text-gray-400 mb-4 text-lg font-bold md:block"
+            >
+              Personalized Recommendations
+            </h3>
+            <p class="text-gray-600 dark:text-gray-100">
+              Jijue provides personalized recommendations to help individuals
+              reduce their risk of HIV transmission. Based on an individual's
+              risk assessment, Jijue will provide tailored advice on testing,
+              prevention, and treatment options. These recommendations are
+              designed to be accessible and easy to understand, so that
+              individuals can take action to protect their health.
+            </p>
+          </div>
+        </div>
+
+        <!-- list item 3 -->
+        <div
+          class="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row"
+        >
+          <!-- heading-->
+          <div class="rounded-l-full bg-blue-200 md:bg-transparent">
+            <div class="flex items-center space-x-2">
+              <div
+                class="px-4 py-2 text-white rounded-full md:py-1 bg-blue-500"
+              >
+                03
+              </div>
+              <h3
+                class="text-base text-gray-900 dark:text-gray-400 font-bold md:mb-4 md:hidden"
+              >
+                User-Friendly Interface
+              </h3>
+            </div>
+          </div>
+
+          <div>
+            <h3
+              class="hidden text-gray-900 dark:text-gray-400 mb-4 text-lg font-bold md:block"
+            >
+              User-Friendly Interface
+            </h3>
+            <p class="text-gray-600 dark:text-gray-100">
+              Jijue has been designed with the user in mind. Our website is easy
+              to navigate and provides clear instructions on how to use the
+              tool. We have worked hard to ensure that the website is accessible
+              to everyone, regardless of their level of technical expertise. Our
+              goal is to provide a seamless user experience that allows
+              individuals to quickly and easily assess their HIV risk and take
+              action to protect themselves.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
   <section id="faq">
     <!-- Accordion -->
     <h1 class="text-4xl font-bold text-center my-20 dark:text-gray-400">
@@ -905,6 +1291,83 @@
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <!-- container to heading and testm blocks -->
+    <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
+      <!-- heading-->
+      <h2
+        class="text-4xl font-bold text-center text-gray-900 dark:text-gray-400"
+      >
+        What the team say about Jijue
+      </h2>
+      <!-- testm container -->
+      <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
+        <!-- testimonial 1 -->
+        <div
+          class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
+        >
+          <img
+            src="../../static/images/avatar_sarah.png"
+            class="w-16 -mt-14"
+            alt=""
+          />
+          <h5 class="text-lg font-bold text-gray-900 dark:text-gray-400">
+            Sarah Mukami
+          </h5>
+          <p class="text-sm text-gray-600 dark:text-gray-100">
+            "Creating Jijue was a challenging and rewarding experience. Our team
+            worked hard to ensure that the machine learning model powering the
+            website is accurate and reliable. I am confident that this tool will
+            help people make informed decisions about their health."
+          </p>
+        </div>
+
+        <!-- testimonial 2 -->
+        <div
+          class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
+        >
+          <img
+            src="../../static/images/avatar_steve.png"
+            class="w-16 -mt-14"
+            alt=""
+          />
+          <h5 class="text-lg font-bold text-gray-900 dark:text-gray-400">
+            Phestus Kitsao
+          </h5>
+          <p class="text-sm text-gray-600 dark:text-gray-100">
+            "Jijue is a powerful tool that empowers individuals to take control
+            of their health. As a developer, I am proud to have worked on a
+            project that has the potential to make a real difference in people's
+            lives"
+          </p>
+        </div>
+
+        <!-- testimonial 3 -->
+        <div
+          class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
+        >
+          <img
+            src="../../static/images/avatar_sam.png"
+            class="w-16 -mt-14"
+            alt=""
+          />
+          <h5 class="text-lg font-bold text-gray-900 dark:text-gray-400">
+            Ambuka Sam
+          </h5>
+          <p class="text-sm text-gray-600 dark:text-gray-100">
+            "Being a part of the Jijue development team was an incredible
+            opportunity. Our goal was to create a user-friendly tool that would
+            educate and inform individuals about their HIV risk. I believe we
+            have succeeded in that mission, and I am proud to have been a part
+            of it."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="dark:bg-gray-800 py-12 mt-8">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2
@@ -929,7 +1392,7 @@
             type="email"
             id="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="your@name.com"
+            placeholder="your@mail.com"
             required
           />
         </div>
@@ -970,77 +1433,6 @@
     </div>
   </section>
 
-  <!-- Content -->
-  <section class="p-20 space-y-8">
-    <h1 class="text-4xl text-center my-20">Tempor sit labore nostrud</h1>
-
-    <p>
-      Exercitation non Lorem exercitation tempor amet ad esse velit. Anim
-      deserunt id nulla quis ex magna culpa exercitation. Mollit consequat enim
-      eiusmod cupidatat commodo eiusmod nulla. Id quis amet incididunt cillum
-      dolore consectetur nulla incididunt laborum excepteur consectetur
-      consectetur sunt tempor. Minim fugiat sint sunt ad elit laboris est sit
-      est laboris labore do velit. Cillum aliquip pariatur deserunt eiusmod.
-      Consequat irure nulla adipisicing deserunt culpa. Veniam enim deserunt
-      sint consequat labore. Enim ullamco ea aute duis et nostrud voluptate
-      fugiat consectetur et velit cillum anim dolore. In exercitation proident
-      proident nostrud voluptate. Fugiat elit esse labore pariatur ex. Ex labore
-      esse voluptate nisi in. Ad anim deserunt reprehenderit est. Aliquip
-      pariatur nulla dolor amet quis aliqua sit nisi officia enim velit. Ad enim
-      eu dolor quis ipsum. Nulla amet consectetur adipisicing ullamco qui tempor
-      dolor excepteur dolore anim pariatur quis laboris consequat. Consectetur
-      ullamco consectetur minim eiusmod quis veniam esse consectetur anim
-      nostrud est pariatur laborum. Mollit tempor minim amet esse. Lorem officia
-      consequat eiusmod sunt. Proident occaecat velit et consequat irure est
-      cupidatat tempor ullamco. Aliquip est pariatur ea ut qui ad sit dolor
-      laboris adipisicing officia eiusmod sit. Proident Lorem ex cillum sint
-      cupidatat amet nulla veniam laborum velit pariatur. Fugiat excepteur culpa
-      sunt est anim sunt. Ea voluptate non do proident sunt ad cillum enim esse.
-    </p>
-
-    <p>
-      Incididunt eu pariatur laborum reprehenderit duis ex cillum fugiat.
-      Occaecat tempor commodo officia esse reprehenderit commodo. Irure nisi
-      culpa anim velit esse do esse veniam dolore fugiat. Non anim elit ad ad
-      esse veniam dolore labore consectetur nulla dolor occaecat quis tempor. Ad
-      do exercitation cillum duis consequat. Ea anim aute elit velit duis quis.
-      Anim sint ut occaecat officia id exercitation ea incididunt exercitation
-      sint ex. Reprehenderit ut qui eiusmod cupidatat incididunt ad
-      reprehenderit culpa tempor quis. Elit eu dolor anim tempor eu fugiat
-      voluptate dolor aliqua sint ex proident ullamco. Labore deserunt velit
-      quis cupidatat aliquip elit do labore ut. Laborum dolore incididunt
-      officia esse reprehenderit pariatur ullamco consectetur tempor officia.
-      Dolor culpa irure enim aute ex non veniam eiusmod ipsum elit est sit
-      mollit dolor. Est ad anim pariatur consequat ad sit nisi.
-    </p>
-
-    <p>
-      Ipsum ea ad fugiat incididunt ea sit laborum cupidatat in ullamco ullamco
-      fugiat et id. Sit commodo enim enim veniam do. Ad id ad tempor deserunt
-      cupidatat reprehenderit ullamco officia excepteur culpa. Officia amet in
-      do voluptate exercitation pariatur officia et sit. Adipisicing deserunt do
-      aliquip ad id elit sint voluptate sit anim nulla pariatur dolore. Lorem do
-      commodo aute veniam deserunt magna commodo cillum magna veniam. Ea amet
-      nostrud commodo nisi adipisicing cillum commodo. Nostrud aliquip cupidatat
-      veniam culpa aute officia commodo velit. Laborum quis aute nulla amet
-      officia esse proident sunt irure dolor fugiat incididunt occaecat. Commodo
-      esse eiusmod fugiat eu enim nisi sit id ut adipisicing. Enim nisi mollit
-      ea aliqua nisi qui ullamco eu velit et ullamco. Magna eiusmod eiusmod
-      culpa proident minim laboris fugiat enim laborum quis mollit minim do
-      nisi. Elit irure incididunt duis ullamco exercitation nulla fugiat. Eu
-      ullamco aliquip aute consectetur excepteur consequat. Non nostrud officia
-      sint enim et ad sunt amet pariatur deserunt enim reprehenderit. Aute Lorem
-      adipisicing laborum labore labore tempor officia officia reprehenderit
-      incididunt enim officia laborum. Proident eu irure occaecat ipsum elit
-      elit anim eu aute commodo ullamco reprehenderit incididunt elit. Mollit
-      voluptate eiusmod ullamco fugiat ex enim in fugiat et consectetur duis do.
-      Et aliqua ad labore labore ea ipsum nostrud veniam et reprehenderit. Sint
-      ad sit voluptate consequat cillum do fugiat Lorem. Pariatur ad ad
-      reprehenderit cupidatat nulla ipsum voluptate. Dolore pariatur ea laboris
-      est excepteur.
-    </p>
-  </section>
-
   <!-- button -->
   <button
     x-data="topBtn"
@@ -1066,225 +1458,47 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-gray-800 pt-10 sm:mt-10 pt-10 w-full">
-  <div class="max-w-6xl m-auto text-gray-800 flex flex-wrap justify-left">
-    <!-- Col-1 -->
-    <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-      <!-- Col Title -->
-      <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-        Getting Started
-      </div>
 
-      <!-- Links -->
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
       <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+        href="https://jijue.kenyahmis.org/"
+        class="flex items-center mb-4 sm:mb-0"
       >
-        Installation
+        <img
+          src="../../static/images/logoo.png"
+          class="h-8 mr-3"
+          alt="Jijue Logo"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Jijue</span
+        >
       </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
       >
-        Release Notes
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Upgrade Guide
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Using with Preprocessors
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Optimizing for Production
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Browser Support
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        IntelliSense
-      </a>
+        <li>
+          <a href="#about" class="mr-4 hover:underline md:mr-6">About</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Terms of Use</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </li>
+      </ul>
     </div>
-
-    <!-- Col-2 -->
-    <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-      <!-- Col Title -->
-      <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-        Core Concepts
-      </div>
-
-      <!-- Links -->
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Utility-First
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Responsive Design
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Hover, Focus, & Other States
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Dark Mode
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Adding Base Styles
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Extracting Components
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Adding New Utilities
-      </a>
-    </div>
-
-    <!-- Col-3 -->
-    <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-      <!-- Col Title -->
-      <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-        Customization
-      </div>
-
-      <!-- Links -->
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Configuration
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Theme Configuration
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Breakpoints
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Customizing Colors
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Customizing Spacing
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Configuring Variants
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Plugins
-      </a>
-    </div>
-
-    <!-- Col-3 -->
-    <div class="p-5 w-1/2 sm:w-4/12 md:w-3/12">
-      <!-- Col Title -->
-      <div class="text-xs uppercase text-gray-400 font-medium mb-6">
-        Community
-      </div>
-
-      <!-- Links -->
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        GitHub
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Discord
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        Twitter
-      </a>
-      <a
-        href="#"
-        class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700"
-      >
-        YouTube
-      </a>
-    </div>
-  </div>
-
-  <!-- Copyright Bar -->
-  <div class="pt-2">
-    <div
-      class="flex pb-5 px-3 m-auto pt-5 border-t border-gray-500 text-gray-400 text-sm flex-col md:flex-row max-w-6xl"
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      >© 2023
+      <a href="https://jijue.kenyahmis.org/" class="hover:underline">Jijue™</a>.
+      All Rights Reserved.</span
     >
-      <div class="mt-2">© Copyright 1998-year. All Rights Reserved.</div>
-
-      <!-- Required Unicons (if you want) -->
-      <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-        <a href="#" class="w-6 mx-1">
-          <i class="uil uil-facebook-f"></i>
-        </a>
-        <a href="#" class="w-6 mx-1">
-          <i class="uil uil-twitter-alt"></i>
-        </a>
-        <a href="#" class="w-6 mx-1">
-          <i class="uil uil-youtube"></i>
-        </a>
-        <a href="#" class="w-6 mx-1">
-          <i class="uil uil-linkedin"></i>
-        </a>
-        <a href="#" class="w-6 mx-1">
-          <i class="uil uil-instagram"></i>
-        </a>
-      </div>
-    </div>
   </div>
 </footer>
 
