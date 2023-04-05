@@ -1,195 +1,892 @@
 {% extends "base/_base.html" %}
 <!-- space -->
-{% block content %}
+{% load static %} {% block content %}
 
-<div
-  class="mt-32 w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
->
-  <ul
-    class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800"
-    id="defaultTab"
-    data-tabs-toggle="#defaultTabContent"
-    role="tablist"
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
-    <li class="mr-2">
-      <button
-        id="about-tab"
-        data-tabs-target="#about"
-        type="button"
-        role="tab"
-        aria-controls="about"
-        aria-selected="true"
-        class="inline-block p-4 text-blue-600 rounded-tl-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
+    <a href="/" class="flex items-center">
+      <img src="{% static 'images/logoo.png' %}" class="h-8" alt="Logo" />
+
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jijue</span
       >
-        About
-      </button>
-    </li>
-    <li class="mr-2">
-      <button
-        id="services-tab"
-        data-tabs-target="#services"
-        type="button"
-        role="tab"
-        aria-controls="services"
-        aria-selected="false"
-        class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-      >
-        Services
-      </button>
-    </li>
-    <li class="mr-2">
-      <button
-        id="statistics-tab"
-        data-tabs-target="#statistics"
-        type="button"
-        role="tab"
-        aria-controls="statistics"
-        aria-selected="false"
-        class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-      >
-        Facts
-      </button>
-    </li>
-  </ul>
-  <div id="defaultTabContent">
-    <div
-      class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
-      id="about"
-      role="tabpanel"
-      aria-labelledby="about-tab"
+    </a>
+
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      aria-controls="navbar-default"
+      aria-expanded="false"
     >
-      <h2
-        class="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="w-6 h-6"
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        Powering innovation & trust at 200,000+ companies worldwide
-      </h2>
-      <p class="mb-3 text-gray-500 dark:text-gray-400">
-        Empower Developers, IT Ops, and business teams to collaborate at high
-        velocity. Respond to changes and deliver great customer and employee
-        service experiences fast.
-      </p>
-      <a
-        href="#"
-        class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-700"
+        <path
+          fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
       >
-        Learn more
-        <svg
-          class="w-6 h-6 ml-1"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+        <li
+          class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-gray-900 md:p-0 dark:text-gray-400 md:dark:text-gray-400"
         >
-          <path
-            fill-rule="evenodd"
-            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </a>
-    </div>
-    <div
-      class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
-      id="services"
-      role="tabpanel"
-      aria-labelledby="services-tab"
-    >
-      <h2
-        class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white"
-      >
-        We invest in the world’s potential
-      </h2>
-      <!-- List -->
-      <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
-        <li class="flex space-x-2">
-          <!-- Icon -->
-          <svg
-            class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+          Mode
+          <button
+            id="theme-toggle"
+            type="button"
+            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
           >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <span class="leading-tight">Dynamic reports and dashboards</span>
-        </li>
-        <li class="flex space-x-2">
-          <!-- Icon -->
-          <svg
-            class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <span class="leading-tight">Templates for everyone</span>
-        </li>
-        <li class="flex space-x-2">
-          <!-- Icon -->
-          <svg
-            class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <span class="leading-tight">Development workflow</span>
-        </li>
-        <li class="flex space-x-2">
-          <!-- Icon -->
-          <svg
-            class="flex-shrink-0 w-4 h-4 text-blue-600 dark:text-blue-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <span class="leading-tight">Limitless business automation</span>
+            <svg
+              id="theme-toggle-dark-icon"
+              class="hidden w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon"
+              class="hidden w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
         </li>
       </ul>
     </div>
-    <div
-      class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
-      id="statistics"
-      role="tabpanel"
-      aria-labelledby="statistics-tab"
-    >
-      <dl
-        class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8"
-      >
-        <div class="flex flex-col">
-          <dt class="mb-2 text-3xl font-extrabold">73M+</dt>
-          <dd class="text-gray-500 dark:text-gray-400">Developers</dd>
-        </div>
-        <div class="flex flex-col">
-          <dt class="mb-2 text-3xl font-extrabold">100M+</dt>
-          <dd class="text-gray-500 dark:text-gray-400">Public repositories</dd>
-        </div>
-        <div class="flex flex-col">
-          <dt class="mb-2 text-3xl font-extrabold">1000s</dt>
-          <dd class="text-gray-500 dark:text-gray-400">Open source projects</dd>
-        </div>
-      </dl>
-    </div>
   </div>
-</div>
+</nav>
+<!-- QUESTIONAIRE FORM -->
+<section id="contact" class="dark:bg-gray-800 py-0">
+  <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+    <h2
+      class="mb-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white"
+    >
+      Risk Assessment Form
+    </h2>
+    <p
+      class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-2xl"
+    >
+      Thank you for taking the time for self screening
+    </p>
+    <form action="{% url 'predictor' %}" method="POST" class="space-y-12">
+      {% csrf_token %}
+      <!-- AGE -->
+      <div>
+        <label
+          for="number"
+          class="form-group block mb-2 text-xl font-medium text-gray-900 dark:text-gray-300"
+          >What is your age?</label
+        >
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="10"
+          max="99"
+          class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+          placeholder="Enter your age"
+          required
+        />
+      </div>
+      <hr />
+
+      <!-- SEX -->
+      <div class="form-group">
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          What is your sex?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="gender"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Male</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="gender"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Female</label
+          >
+        </div>
+      </div>
+      <hr />
+
+      <!-- COUNTY -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          What is your current county of residence?
+        </p>
+        <select
+          id="most-like"
+          name="county"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          required
+        >
+          <option disabled selected value>Select an option</option>
+          <option value="Mombasa">Mombasa</option>
+          <option value="Kwale">Kwale</option>
+          <option value="Kilifi">Kilifi</option>
+          <option value="TanaRiver">Tana River</option>
+          <option value="Lamu">Lamu</option>
+          <option value="Taita-Taveta">Taita-Taveta</option>
+          <option value="Garissa">Garissa</option>
+          <option value="Wajir">Wajir</option>
+          <option value="Mandera">Mandera</option>
+          <option value="Marsabit">Marsabit</option>
+          <option value="Isiolo">Isiolo</option>
+          <option value="Meru">Meru</option>
+          <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+          <option value="Embu">Embu</option>
+          <option value="Kitui">Kitui</option>
+          <option value="Machakos">Machakos</option>
+          <option value="Makueni">Makueni</option>
+          <option value="Nyandarua">Nyandarua</option>
+          <option value="Nyeri">Nyeri</option>
+          <option value="Kirinyaga">Kirinyaga</option>
+          <option value="Murang'a">Murang'a</option>
+          <option value="Kiambu">Kiambu</option>
+          <option value="Turkana">Turkana</option>
+          <option value="West Pokot">West Pokot</option>
+          <option value="Samburu">Samburu</option>
+          <option value="Trans Nzoia">Trans Nzoia</option>
+          <option value="Uasin Gishu">Uasin Gishu</option>
+          <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+          <option value="Nandi">Nandi</option>
+          <option value="Baringo">Baringo</option>
+          <option value="Laikipia">Laikipia</option>
+          <option value="Nakuru">Nakuru</option>
+          <option value="Narok">Narok</option>
+          <option value="Kajiado">Kajiado</option>
+          <option value="Kericho">Kericho</option>
+          <option value="Bomet">Bomet</option>
+          <option value="Kakamega">Kakamega</option>
+          <option value="Vihiga">Vihiga</option>
+          <option value="Bungoma">Bungoma</option>
+          <option value="Busia">Busia</option>
+          <option value="Siaya">Siaya</option>
+          <option value="Kisumu">Kisumu</option>
+          <option value="Homabay">Homabay</option>
+          <option value="Migori">Migori</option>
+          <option value="Kisii">Kisii</option>
+          <option value="Myamira">Nyamira</option>
+          <option value="Nairobi">Nairobi</option>
+        </select>
+      </div>
+      <hr />
+
+      <!-- MARITAL STATUS -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          What is your marital status?
+        </p>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="maritalStatus"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Single</label
+          >
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="maritalStatus"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Cohabiting</label
+          >
+        </div>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="maritalStatus"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Married Monogamous</label
+          >
+        </div>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="maritalStatus"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Married Polygamous</label
+          >
+        </div>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="maritalStatus"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Divorced</label
+          >
+        </div>
+
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="maritalStatus"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >Widowed</label
+          >
+        </div>
+      </div>
+      <hr />
+
+      <!-- HIV STATUS/COUPLE DISCORDANT  -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Is/was your partner HIV positive?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="coupleDiscordant"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="coupleDiscordant"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+
+      <!-- SEX WITH WOMAN -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          In the past 12 months, have you had sex with a woman?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Yes"
+            name="SexWithWoman"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="No"
+            name="SexWithWoman"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+
+      <!-- SEX WITH MAN -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          In the past 12 months, have you had sex with a man?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Yes"
+            name="SexWithMan"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="No"
+            name="SexWithMan"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- CONDOM USE -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          In the past 12 months, did you use condoms for vaginal or anal sex?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Always"
+            name="condom_use"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >I always use condoms with all my partners</label
+          >
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Sometimes"
+            name="condom_use"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >I sometimes use condoms with all my partners</label
+          >
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Never"
+            name="condom_use"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >I never use condoms with all my partners</label
+          >
+        </div>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Not applicable"
+            name="condom_use"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Not applicable as no vaginal or anal sex</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- SEX WORKER -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Are you a sex worker?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="sw"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="sw"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- INJECT DRUGS -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Do you regularly use needles to inject drugs?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="pwid"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="pwid"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- TESTEDBEFORE IN PAST 3 MONTHS -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Have you been tested for HIV in the past 3 months?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="testedBefore"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="testedBefore"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- PRESUMED TB / TB SYMPTOMS -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Have you experienced any one of these symptoms? (cough at any
+          duration, fever, unintended weight loss, drenching night sweat)?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="presumedTB"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="presumedTB"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- TB TREATMENT -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Are you on TB treatment?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="1"
+            name="treatmentTB"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="0"
+            name="treatmentTB"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- STI HISTORY -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Have you had STI (Sexually Transmitted Infections) in the past?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Yes"
+            name="sti"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="No"
+            name="sti"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- RAPE VICTIM -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Have you ever been a victim of rape?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Yes"
+            name="rapevictim"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="No"
+            name="rapevictim"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+      <!-- PREP USE -->
+      <div>
+        <p
+          class="block mb-4 text-xl font-medium text-gray-900 dark:text-gray-300"
+        >
+          Are you currently using HIV Pre-exposure Prophylaxis (PrEP)?
+        </p>
+        <div class="flex items-center mb-4">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="Yes"
+            name="HIVPrEP"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >Yes</label
+          >
+        </div>
+
+        <div class="flex items-center">
+          <input
+            id="default-radio-1"
+            type="radio"
+            value="No"
+            name="HIVPrEP"
+            class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            required
+          />
+          <label
+            for="default-radio-1"
+            class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300"
+            >No</label
+          >
+        </div>
+      </div>
+      <hr />
+
+      <button
+        action="{% url 'predictor' %}"
+        type="submit"
+        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a
+        href="https://jijue.kenyahmis.org/"
+        class="flex items-center mb-4 sm:mb-0"
+      >
+        <img
+          src="../../static/images/logoo.png"
+          class="h-8 mr-3"
+          alt="Jijue Logo"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Jijue</span
+        >
+      </a>
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+      >
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Terms of Use</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      >© 2023
+      <a href="https://jijue.kenyahmis.org/" class="hover:underline">Jijue™</a>.
+      All Rights Reserved.</span
+    >
+  </div>
+</footer>
 
 {% endblock content %}
