@@ -1,0 +1,350 @@
+<!-- templates/index.html -->
+
+{% extends "base/_base.html" %}
+<!-- space -->
+{% block content %}
+<!-- NAVBAR -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="#" class="flex items-center">
+      <img src="../../static/images/logoo.png" class="h-8 mr-3" alt="Logo" />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jijue</span
+      >
+    </a>
+    <div class="flex md:order-2">
+      <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
+      <button
+        id="theme-toggle"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      >
+        <svg
+          id="theme-toggle-dark-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          id="theme-toggle-light-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <button
+        data-collapse-toggle="navbar-cta"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-cta"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-cta"
+    >
+      <ul
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Home</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="py-6 md:py-8">
+  <h2
+    class="text-gray-600 dark:text-gray-300 font-bold text-center text-xl underline underline-offset-8 hover:underline-offset-4 md:text-4xl lg:text-4xl"
+  >
+    Terms of Use
+  </h2>
+
+  <p class="mt-2 md:mt-4 px-4 dark:text-gray-400 text-gray-500">
+    By using this site, you agree you understand the following information and
+    accept these terms in full.
+  </p>
+
+  <h3
+    class="mt-4 md:mt-8 px-2 md:px-4 text-gray-600 dark:text-gray-300 font-bold text-left text-l md:text-xl lg:text-xl"
+  >
+    Introduction
+  </h3>
+  <p class="mt-2 md:mt-4 px-4 dark:text-gray-400 text-gray-500">
+    Jijue website was created by a multidisciplinary team of students from Jomo
+    Kenyatta University of Agriculture and Technology. The aim of the web app is
+    to provide a user-friendly platform for individuals to assess their HIV risk
+    and connect them to Health Facilities for further management. The platform
+    offers users the ability to access testing for HIV and other STIs; and links
+    users to services, including PrEP, through networked service providers.
+  </p>
+
+  <h3
+    class="mt-4 md:mt-8 px-2 md:px-4 text-gray-600 dark:text-gray-300 font-bold text-left text-l underline underline-offset-4 md:text-xl lg:text-xl"
+  >
+    Information on HIV
+  </h3>
+  <p class="mt-2 md:mt-4 px-4 dark:text-gray-400 text-gray-500">
+    HIV is the virus that causes AIDS and can be transmitted through unprotected
+    sex (vaginal, anal, or oral sex) with someone who is living with HIV;
+    contact with blood through sharing needles (ex. injecting drugs); or from
+    pregnant women living with HIV to their infants during pregnancy, delivery,
+    or breast feeding.
+    <br />
+    Individuals with HIV/AIDS can adopt safe practices to prevent transmitting
+    HIV to others.
+  </p>
+
+  <h3
+    class="mt-4 md:mt-8 px-2 md:px-4 text-gray-600 dark:text-gray-300 font-bold text-left text-l md:text-xl lg:text-xl"
+  >
+    Terms
+  </h3>
+  <ul
+    class="space-y-2 mt-2 md:mt-4 px-4 text-gray-500 list-disc list-inside dark:text-gray-400"
+  >
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      Sensitive personal information including your profile, clinical history
+      and test results will be stored by Jijue but will only be used to provide
+      you with better care options. The data will be protected under the
+      standard privacy laws of Kenya.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      No identifiable information obtained through the use of the platform will
+      be disclosed to other entities without your consent. The laws that protect
+      the privacy and confidentiality of medical information also apply to
+      information procured by Jijue.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      You have the right to inspect all information obtained and recorded in the
+      course of a telemedicine interaction, and may receive copies of this
+      information.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      If you opt for teleconsultation, the session may be recorded for reference
+      but the recordings will not be used for advertising and will be protected
+      along with other sensitive identifiable information.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      You may choose one or more of the variety of alternative methods of
+      medical care which are available through networked service providers at
+      any time. Your Virtual Counsellor will be available to explain the
+      alternatives.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      Jijue may electronically share your personal medical information to other
+      medical practitioners who may be located in other areas, including out of
+      state, however who have been vetted and registered with the platform.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      The Virtual Counsellor appointed to you may be authorized by you to use
+      the platform on your behalf, including setting up an account, uploading
+      test results and booking appointments, home pick-ups or follow-up
+      procedures.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      You may be contacted for follow up of services to improve your health
+      outcomes through the services sought at Jijue.
+    </li>
+    <li class="flex items-center">
+      <svg
+        class="w-4 h-4 mr-2 text-green-500 dark:text-green-400 flex-shrink-0"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      You have the right to withhold or withdraw your consent for the use of the
+      platform Jijue at any time, without affecting your future care or
+      treatment.
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a
+        href="https://jijue.kenyahmis.org/"
+        class="flex items-center mb-4 sm:mb-0"
+      >
+        <img
+          src="../../static/images/logoo.png"
+          class="h-8 mr-3"
+          alt="Jijue Logo"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Jijue</span
+        >
+      </a>
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+      >
+        <li>
+          <a href="#about" class="mr-4 hover:underline md:mr-6">About</a>
+        </li>
+        <li>
+          <a
+            href="{% url 'privacy_policy' %}"
+            class="mr-4 hover:underline md:mr-6"
+            >Privacy Policy</a
+          >
+        </li>
+        <li>
+          <a
+            href="{% url 'terms_of_use' %}"
+            class="mr-4 hover:underline md:mr-6"
+            >Terms of Use</a
+          >
+        </li>
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      >© 2023
+      <a href="https://jijue.kenyahmis.org/" class="hover:underline">Jijue™</a>.
+      All Rights Reserved.</span
+    >
+  </div>
+</footer>
+{% endblock content %}
