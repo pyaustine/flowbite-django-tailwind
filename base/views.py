@@ -90,3 +90,7 @@ def welcome(request):
 
 def survey(request):
     return render(request, 'base/survey.html')
+
+
+def vctPage(request):
+    return render(request, 'base/vct.html')
