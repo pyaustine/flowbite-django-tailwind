@@ -1,0 +1,354 @@
+{% extends "base/_base.html" %}
+<!-- space -->
+{% load static %}
+<!-- space -->
+{% block content %}
+<!-- NAVBAR -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="#" class="flex items-center">
+      <img src="../../static/images/logoo.png" class="h-8 mr-3" alt="Logo" />
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >Jijue</span
+      >
+    </a>
+    <div class="flex md:order-2">
+      <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button> -->
+      <button
+        id="theme-toggle"
+        type="button"
+        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      >
+        <svg
+          id="theme-toggle-dark-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+          ></path>
+        </svg>
+        <svg
+          id="theme-toggle-light-icon"
+          class="hidden w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <button
+        data-collapse-toggle="navbar-cta"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-cta"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- CONTENT -->
+
+<div class="">
+  <h1
+    class="mb-4 text-4xl text-center mt-6 font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+  >
+    Jijue Privacy & Data Use Policy
+  </h1>
+  <p
+    class="mb-6 font-normal text-gray-500 lg:text-xl sm:text-m sm:px-16 xl:px-48 dark:text-gray-400"
+  >
+    Client confidentiality is extremely important at Jijue. Our trained
+    management, outreach and counselling staff carefully support clients and
+    handle their information securely. Here we explain what data may be
+    collected on Jijue, how we use that data, and our protocol for protecting
+    the confidentiality of our clients and their information.
+  </p>
+</div>
+
+<div>
+  <h2 class="text-4xl font-extrabold dark:text-white">
+    What information do I share with Jijue?
+  </h2>
+
+  <p
+    class="mb-4 mt-4 font-normal lg:text-xl sm:text-m sm:px-16 xl:px-48 text-gray-500 dark:text-gray-400"
+  >
+    You may share some information with us to assess your HIV and sexual health
+    needs and book services at our clinical partners.
+  </p>
+
+  <h3 class="text-2xl font-bold dark:text-white">
+    1. Assessing your HIV and sexual health needs
+  </h3>
+  <p
+    class="mb-4 mt-4 font-normal lg:text-xl sm:text-m sm:px-16 xl:px-48 text-gray-500 dark:text-gray-400"
+  >
+    Use the risk assessment to receive HIV and sexual health service
+    recommendations that are tailored to your needs. The risk assessment will
+    ask questions about your HIV testing history, current HIV status and several
+    factors that may impact your sexual health needs, like gender, sexuality,
+    and several HIV risk factors. This information provides you with the most
+    relevant service recommendations. We routinely use this data to help us
+    ensure we reach all populations and improve our outreach and service
+    delivery. Your responses on the risk assessment are kept confidential and
+    are not shared with Jijue client support team and not shared with our
+    clinical partners.
+  </p>
+
+  <h3 class="text-2xl font-bold dark:text-white">2. Booking services</h3>
+  <p
+    class="mb-4 mt-4 font-normal lg:text-xl sm:text-m sm:px-16 xl:px-48 text-gray-500 dark:text-gray-400"
+  >
+    Use the appointment booking feature to find HIV and sexual health services
+    near you and book an appointment for a day and time that is convenient for
+    you. Using Jijue, you can book services at private labs, private providers,
+    or receive support to be linked to public services. When you book an
+    appointment, you may share your GPS location (optional), age (in years),
+    name or nickname, phone number, and the services you would like to receive
+    during your appointment. Your phone number enables us to provide pre and
+    post-test HIV counseling and help link you to any follow-up prevention or
+    treatment services. If you enable location sharing with us, our clinical
+    service offerings will be prioritized to show you the nearest services
+    first. If you refuse to share your location, you can simply choose your city
+    and neighborhood where you would like to find service offerings.
+  </p>
+</div>
+
+<div>
+  <h2 class="text-4xl font-extrabold dark:text-white">
+    What information does Jijue share with clinical providers?
+  </h2>
+
+  <p
+    class="mb-4 mt-4 font-normal lg:text-xl sm:text-m sm:px-16 xl:px-48 text-gray-500 dark:text-gray-400"
+  >
+    Jijue shares some information with clinical providers to help facilitate
+    your appointment. This includes the information you enter to book an
+    appointment on Jijue like your name, phone number, services requested, date
+    and time of appointment. This data is used to confirm your appointment and
+    to verify when you reach the VCT. Your responses on the risk assessment are
+    not shared with the clinics.
+  </p>
+</div>
+
+<div>
+  <h2 class="text-4xl font-extrabold dark:text-white">
+    What information do clinical partners/VCT centres share with Jijue?
+  </h2>
+
+  <p
+    class="mb-4 mt-4 font-normal lg:text-xl sm:text-m sm:px-16 xl:px-48 text-gray-500 dark:text-gray-400"
+  >
+    To facilitate secure data sharing and reporting, Jijue signs a memorandum of
+    understanding (an “agreement) with all our clinic partners which binds the
+    clinics to maintain absolute confidentiality and treat client data with
+    extreme sensitivity. This agreement allows us to share your appointment
+    information with clinical partners and for clinical partners to securely
+    report to Jijue when you access services and report your diagnostic test
+    results. The test results are secured at a password protected system and
+    only accessed by a data manager for reporting and improving our services. It
+    also ensures that we reach populations most in need of HIV services and
+    ensure that follow-up prevention, testing and treatment services can be
+    offered to every client requesting services on Jijue. You can choose whether
+    to share your diagnostic test results with Jijue counselor during the post-
+    test counseling call, which will help the counselor to provide you relevant
+    services and recommendations.
+  </p>
+</div>
+
+<div>
+  <h2 class="text-4xl font-extrabold dark:text-white">Additional safeguards</h2>
+  <ul class="mb-8 mt-4 space-y-6 text-left text-gray-500 dark:text-gray-400">
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="lg:text-xl sm:text-m sm:px-16 xl:px-48"
+        >Jijue online client support team, including outreach workers and
+        counselors, are trained in client confidentiality and have signed and
+        are bound to a code of ethics.</span
+      >
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="lg:text-xl sm:text-m sm:px-16 xl:px-48"
+        >Clinical partners have signed an agreement with Jijue that allows for
+        data security and data sharing with Jijue to protect clients.</span
+      >
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="lg:text-xl sm:text-m sm:px-16 xl:px-48"
+        >Jijue have trained clinical partners on the provision of stigma-free
+        services for Jijue clients, including for key populations.</span
+      >
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="lg:text-xl sm:text-m sm:px-16 xl:px-48">
+        Jijue collects feedback from clients about the clinical services they
+        receive through Jijue and shares this anonymous feedback with clinical
+        partners to improve their service delivery.
+      </span>
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="lg:text-xl sm:text-m sm:px-16 xl:px-48"
+        >Risk assessment responses are not shared with clinics.</span
+      >
+    </li>
+    <li class="flex items-center space-x-3">
+      <!-- Icon -->
+      <svg
+        class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <span class="lg:text-xl sm:text-m sm:px-16 xl:px-48"
+        >HIV test results are not shared from clinical partners to Jijue client
+        support team ( outreach workers and counselors) Clients can choose
+        whether to disclose their HIV status or HIV test results with Jijue
+        counselors to receive support services that Jijue website uses a range
+        of security measures to protect clients using Jijue and data stored on
+        Jijue, including using SQL, an encrypted server, password protected user
+        logins.
+      </span>
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a
+        href="https://jijue.kenyahmis.org/"
+        class="flex items-center mb-4 sm:mb-0"
+      >
+        <img
+          src="../../static/images/logoo.png"
+          class="h-8 mr-3"
+          alt="Jijue Logo"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Jijue</span
+        >
+      </a>
+      <ul
+        class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+      >
+        <li>
+          <a href="{% url 'privacy' %}" class="mr-4 hover:underline md:mr-6"
+            >Privacy Policy</a
+          >
+        </li>
+        <li>
+          <a href="{% url 'terms' %}" class="mr-4 hover:underline md:mr-6"
+            >Terms of Use</a
+          >
+        </li>
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      >© 2023
+      <a href="https://jijue.kenyahmis.org/" class="hover:underline">Jijue™</a>.
+      All Rights Reserved.</span
+    >
+  </div>
+</footer>
+
+{% endblock content %}
