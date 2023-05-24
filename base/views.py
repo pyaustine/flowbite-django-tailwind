@@ -94,3 +94,9 @@ def survey(request):
 
 def vctPage(request):
     return render(request, 'base/vct.html')
+
+def terms_page(request):
+    return render(request, 'base/terms_of_use.html')
+
+def privacy_page(request):
+    return render(request, 'base/privacy.html')
