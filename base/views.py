@@ -100,3 +100,6 @@ def terms_page(request):
 
 def privacy_page(request):
     return render(request, 'base/privacy.html')
+
+def referral_page(request):
+    return render(request, 'base/message.html')
