@@ -339,7 +339,13 @@
               administration, tracking, and demographic research. This privacy
               policy applies only to online activities on the website.
               <br />
-              Read more about our privacy policy and terms of use.
+              Read more about our
+              <a href="{% url 'privacy' %}" class="text-blue-600"
+                >privacy policy</a
+              >
+              and
+              <a href="{% url 'terms' %}" class="text-blue-600">terms of use</a
+              >.
             </p>
             <h4 class="text-xl font-semibold text-gray-900 dark:text-white">
               Disclaimer
@@ -1483,16 +1489,12 @@
           <a href="#about" class="mr-4 hover:underline md:mr-6">About</a>
         </li>
         <li>
-          <a
-            href="{% url 'privacy_policy' %}"
-            class="mr-4 hover:underline md:mr-6"
+          <a href="{% url 'privacy' %}" class="mr-4 hover:underline md:mr-6"
             >Privacy Policy</a
           >
         </li>
         <li>
-          <a
-            href="{% url 'terms_of_use' %}"
-            class="mr-4 hover:underline md:mr-6"
+          <a href="{% url 'terms' %}" class="mr-4 hover:underline md:mr-6"
             >Terms of Use</a
           >
         </li>
