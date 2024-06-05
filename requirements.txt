@@ -2,12 +2,15 @@ asgiref==3.6.0
 autopep8==2.0.2
 certifi==2022.12.7
 charset-normalizer==3.1.0
-Django==4.2
+Django==3.2.1
 django-appconf==1.0.5
 django-compressor==4.3.1
+gunicorn==22.0.0
 idna==3.4
 joblib==1.2.0
 numpy==1.24.2
+packaging==24.0
+psycopg2==2.9.9
 pycodestyle==2.10.0
 PyJWT==2.6.0
 python-dotenv==1.0.0
@@ -22,3 +25,4 @@ threadpoolctl==3.1.0
 twilio==7.17.0
 tzdata==2023.3
 urllib3==1.26.15
+whitenoise==6.6.0
