@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'jijue.wsgi.application'
 
 if not DEBUG:
     DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+	"default": dj_database_url.parse(os.getenv("DATABASE_URL"))
 }
     
 else:
